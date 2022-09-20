@@ -1,0 +1,48 @@
+nav{
+    padding-left: 3%;
+    position: absolute;
+    top:1%;
+    width: 100%;
+    z-index: 9999;
+    background-color: transparent;
+    
+
+}
+.navbar-nav a{
+    color:white;
+    padding-left: 13%;
+    font-size: large;
+    font-weight: lighter;
+    letter-spacing: 0.5px;
+    
+
+}
+
+.navbar-nav a:hover{
+    color:darkgray;
+    transition: 0.5s;
+    
+    
+
+}
+
+.navbar-nav{
+    color:white;
+    margin-left: 2%;
+
+}
+#logo{
+    color: white;
+ 
+}
+@media only screen and (max-width: 575px){
+    #logo{
+        margin:auto;
+        font-size:130%;
+        font-weight: 200;
+    }
+    nav{
+        padding-left: 0;
+        border-bottom: 0.5px solid white;
+    }
+}

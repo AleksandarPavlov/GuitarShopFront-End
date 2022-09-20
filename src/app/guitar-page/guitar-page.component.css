@@ -1,0 +1,50 @@
+#guitar-img{
+  height: 85vh;
+  width: auto;
+  margin-top: 5%;
+  float: right;
+ 
+ 
+
+}
+
+#price{
+  font-weight:490;
+}
+.row{
+  margin: 0;
+}
+
+h1{
+  margin-bottom: 8%;
+}
+  
+#Available{
+    color: rgb(0, 147, 0);
+}
+
+#NotAvailable{
+    color:red;
+}
+.card-body{
+  margin-top: 10%;
+  float: left;
+}
+p{
+  font-size: larger;
+}
+@media only screen and (max-width: 575px){
+
+  #guitar-img{
+    height:100%;
+    width: 100%;
+    margin-top: 5%;
+    object-fit:scale-down;
+   
+  }
+  .row{
+    margin: 0;
+    font-size: smaller;
+    margin-top: 30%;
+  }
+}

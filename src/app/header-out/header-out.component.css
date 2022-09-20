@@ -1,0 +1,63 @@
+nav{
+    padding-left: 3%;
+    background: black;
+    
+    
+    
+    
+
+}
+
+#logo{
+ font-weight: bold;
+}
+
+nav a{
+    color: white;
+    font-weight: lighter;
+    font-size: 105%;
+    
+}
+nav ul{
+    padding-left: 3%;
+}
+
+nav ul li{
+    padding-left: 3%;
+}
+
+nav ul li :hover{
+    color: darkgray;
+    transition: 0.5s;
+    
+    
+}
+
+
+@media only screen and (max-width: 575px){
+
+    nav{
+        position: fixed;
+        top: 0px;
+        right: 0px;
+       
+        left: 0px;
+    }
+
+    nav a{
+        color: white;
+        font-weight:normal;
+        font-size: 105%;
+        
+    }
+
+    #logo{
+        margin-left: 1%;
+    }
+
+    .navbar-toggler{
+        margin-right: 2%;
+    }
+
+
+}

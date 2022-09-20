@@ -1,0 +1,21 @@
+<app-header-out></app-header-out>
+
+<div class = row>
+      <div class="col-6">
+        <img src="{{guitar.sliderImage}}" id= "guitar-img"class="card-img-top" alt="...">
+      </div>
+      <div class = "col-6">
+        <div class="card-body">
+          <h1 class="card-title">{{guitar.brand}} {{guitar.model}}</h1>
+          <p class="card-text"><small class="text-muted">-Type: {{guitar.guitarType}}</small></p>
+          <p class="card-text"><small class="text-muted">-Neck: {{guitar.neck}}</small></p>
+          <p class="card-text" id="price"> -Price: {{guitar.price}} RSD</p>
+          <p class="card-text" id = "Available" *ngIf = "guitar.available == true">-Available</p>
+          <p class="card-text" id = "NotAvailable" *ngIf = "guitar.available == false">-Not Available</p>
+          <a href="#" class="btn btn-secondary">ADD TO CART</a>
+        </div>
+      </div>
+    </div>
+   
+
+    

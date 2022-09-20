@@ -1,0 +1,78 @@
+<app-header-out></app-header-out>
+<app-products-nav></app-products-nav>
+<h1>Electric Guitars</h1>
+<div class="dropdown">
+  <div class = "row">
+  <div class = "col-6">
+  <h4 class="btn btn-secondary dropdown-toggle" data-bs-toggle="offcanvas"id="sideMenuButton" data-bs-target="#offcanvas" role="button">
+     Products
+  </h4>
+</div>
+<div class = "col-6" id ="col-right">
+  <h4 class="btn btn-secondary dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Sort By
+  </h4>
+  <div class="dropdown-menu" id="dm" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" (click) = "priceAsc()">Lowest Price</a>
+    <a class="dropdown-item"(click) = "priceDesc()">Highest Price</a>
+  </div>
+</div>
+</div>
+  
+</div>
+
+<div class="row">
+    <div class="col-md-3 col-sm-6 col-6" id = "col" *ngFor = "let guitar of guitars">
+        <div class="card">
+            <img class="card-img-top" routerLink = "/guitar-page/{{guitar.id}}" src="{{guitar.image}}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{guitar.brand}} {{guitar.model}}</h5>
+              <p class="card-text-none"> <small class="text-muted">Guitar Type: {{guitar.guitarType}}</small> </p>
+              <p class="card-text-none"> <small class="text-muted">Neck: {{guitar.neck}}</small></p>
+              <p class="card-text"> <small class="text-muted">Price: {{guitar.price}} RSD</small></p>
+              <p class="card-text" id = "Available" *ngIf = "guitar.available == true">Available</p>
+              <p class="card-text" id = "NotAvailable" *ngIf = "guitar.available == false"> Not Available</p>
+              <a href="#" class="btn btn-secondary">Buy Now</a>
+            </div>
+          </div>
+    </div>
+   
+  </div>
+
+  <div class="offcanvas offcanvas-start w-25" tabindex="-1" id="offcanvas" data-bs-keyboard="false" data-bs-backdrop="false">
+    <div class="offcanvas-header">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body px-0" id="sideMenu">
+        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">
+          <h3 id ="sideTitle">Category</h3>
+            <li class="nav-item">
+              <small  routerLink = "/electric-guitars">
+                Electric Guitars
+              </small>
+                
+            </li>
+            <li class="nav-item">
+              <small  routerLink = "/acoustic-guitars">
+                Acoustic Guitars
+              </small>
+            </li>
+            <li class="nav-item">
+              <small  routerLink = "/bass-guitars" >
+                Bass Guitars
+              </small>
+            </li>
+            <li class="nav-item">
+              <small >
+                Guitar Amplifiers
+              </small>
+            </li>
+            <li class="nav-item">
+              <small>
+                Bass Amplifiers
+              </small>
+            </li>
+        </ul>
+    </div>
+</div>
+

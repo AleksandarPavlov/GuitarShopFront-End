@@ -1,0 +1,23 @@
+nav{
+    background: rgb(233, 233, 233);
+    padding-left: 37.5%;
+
+}
+nav a{
+    color: black;
+    border-right: 1px solid black;
+    font-weight: bolder;
+ 
+
+}
+#bass{
+    border: none;
+}
+
+@media only screen and (max-width: 575px){
+    nav{
+       
+        margin-top: 55px;
+       
+    }
+}
